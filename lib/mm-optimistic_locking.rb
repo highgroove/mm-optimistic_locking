@@ -1,9 +1,17 @@
+require 'mongo_mapper'
+
 module MongoMapper
   autoload :StaleDocumentError, "mongo_mapper/stale_document_error"
 
   module Plugins
-    module OptimisticLocking
-      VERSION = "0.0.1"
+    autoload :OptimisticLocking, "mongo_mapper/plugins/optimistic_locking.rb"
+  end
+
+  module Plugins
+    module Querying
+      module InstanceMethods
+        include MongoMapper::Plugins::OptimisticLocking::QueryingInterceptor
+      end
     end
   end
 end
