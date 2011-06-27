@@ -7,7 +7,7 @@ module MongoMapper
 
       extend ActiveSupport::Concern
 
-      VERSION = "0.0.1"
+      VERSION = "0.0.2"
 
       included do |base|
         base.key :_lock_version, Integer, :default => 0
