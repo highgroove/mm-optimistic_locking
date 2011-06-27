@@ -7,9 +7,9 @@ Optimistic Locking?
 -------------------
 
 When attempting to save a record, optimistic locking verifies that the
-record has not been modified since it was earlier loaded into memory.
-If it has been modified and resaved since that time, an error is raised
-and the record must be reloaded and resaved again.
+record has not been modified by another process since it was earlier loaded
+into memory.  If it has been modified and resaved since that time, an error is
+raised and the record must be reloaded and resaved again.
 
 Optimistic locking is appropriate when the chance of a conflict is low
 and records can easily recover when a conflict does occur (e.g., simply
