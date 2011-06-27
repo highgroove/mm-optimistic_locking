@@ -31,5 +31,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongo_mapper', '~>0.9.0'
   s.add_dependency 'activesupport', '~>3.0'
 
+  s.add_development_dependency 'rake', '~>0.8.7'
   s.add_development_dependency 'rspec', '~>2.6.0'
 end
