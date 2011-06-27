@@ -1,8 +1,10 @@
-= mm-optimistic_locking
+mm-optimistic_locking
+=====================
 
 mm-optimistic_locking implements optimistic locking in mongo_mapper.
 
-== What is optimistic locking?
+Optimistic Locking?
+-------------------
 
 When attempting to save a record, optimistic locking verifies that the
 record has not been modified since it was earlier loaded into memory.
@@ -18,7 +20,8 @@ Before using mm-optimistic_locking, you should first consider if your use case
 for locking can be handled by MongoDB's various [atomic operations](http://www.mongodb.org/display/DOCS/Atomic+Operations).
 It is possible that you do not need this type of locking at all.
 
-== Quickstart
+Quickstart
+----------
 
 If using Bundler (e.g., with Rails 3), add the gem to your project's
 Gemfile:
@@ -51,11 +54,13 @@ rescue MongoMapper::StaleDocumentError
 end
 ```
 
-== Related Projects
+Related Projects
+----------------
 
 * [mongo_mapper](http://mongomapper.com/)
 
-== Contributing
+Contributing
+------------
 
 * Fork the repository on [GitHub](https://github.com/highgroove/mm-optimistic_locking)
 * Create a [feature branch](http://nvie.com/posts/a-successful-git-branching-model/) (a.k.a., create a branch named my-awesome-feature)
