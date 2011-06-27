@@ -42,6 +42,7 @@ class BlogPost
   # Add the following line to each model that needs optimistic locking
   plugin MongoMapper::Plugins::OptimisticLocking
 end
+```
 
 Finally, make sure to rescue from `MongoMapper::StaleDocumentError`
 any time you save a model with optimistic locking functionality:
