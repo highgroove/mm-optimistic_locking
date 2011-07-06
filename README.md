@@ -49,9 +49,13 @@ any time you save a model with optimistic locking functionality:
 
 ``` ruby
 begin
+  # .. making modifications to blog_post ..
   blog_post.save
 rescue MongoMapper::StaleDocumentError
   # Reload, remodify, and resave
+  # e.g.:
+  blog_post.reload
+  retry
 end
 ```
 
