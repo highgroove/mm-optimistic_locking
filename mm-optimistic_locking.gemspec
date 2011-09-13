@@ -4,7 +4,7 @@ require "mm-optimistic_locking"
 
 Gem::Specification.new do |s|
   s.name        = "mm-optimistic_locking"
-  s.version     = MongoMapper::Plugins::OptimisticLocking::VERSION
+  s.version     = "0.0.2"
   s.authors     = ["Andy Lindeman"]
   s.email       = ["andy@highgroove.com"]
   s.homepage    = "http://github.com/highgroove/mm-optimistic_locking"
