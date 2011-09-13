@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "mm-optimistic_locking"
 
 Gem::Specification.new do |s|
   s.name        = "mm-optimistic_locking"

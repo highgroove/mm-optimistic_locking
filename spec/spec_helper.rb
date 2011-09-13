@@ -9,8 +9,7 @@ begin
 rescue LoadError
 end
 
-$:.push(File.expand_path("../lib", File.dirname(__FILE__)))
-require 'mm-optimistic_locking'
+require File.expand_path("../lib/mm-optimistic_locking", File.dirname(__FILE__))
 
 MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
 MongoMapper.database = "mm-optimistic_locking_test"

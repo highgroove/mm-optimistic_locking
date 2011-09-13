@@ -1,17 +1,8 @@
 require 'mongo_mapper'
 
-module MongoMapper
-  autoload :StaleDocumentError, "mongo_mapper/stale_document_error"
+require File.expand_path("mongo_mapper/stale_document_error", File.dirname(__FILE__))
+require File.expand_path("mongo_mapper/plugins/optimistic_locking", File.dirname(__FILE__))
 
-  module Plugins
-    autoload :OptimisticLocking, "mongo_mapper/plugins/optimistic_locking.rb"
-  end
-
-  module Plugins
-    module Querying
-      module InstanceMethods
-        include MongoMapper::Plugins::OptimisticLocking::QueryingInterceptor
-      end
-    end
-  end
+MongoMapper::Plugins::Querying::InstanceMethods.class_eval do
+  include MongoMapper::Plugins::OptimisticLocking::QueryingInterceptor
 end
