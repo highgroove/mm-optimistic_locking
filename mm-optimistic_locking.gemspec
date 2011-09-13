@@ -13,12 +13,17 @@ Gem::Specification.new do |s|
     ".gitignore",
     "Gemfile",
     "Rakefile",
+    "README.md",
     "lib/mm-optimistic_locking.rb",
     "lib/mongo_mapper/stale_document_error.rb",
-    "mm-optimistic_locking.gemspec",
+    "lib/mongo_mapper/plugins/optimistic_locking.rb",
+    "lib/mongo_mapper/plugins/optimistic_locking/querying_interceptor.rb",
+    "mm-optimistic_locking.gemspec"
   ]
 
   s.test_files    = [
+    "spec/spec_helper.rb",
+    "spec/integration/optimistic_locking_spec.rb"
   ]
 
   s.executables   = [
